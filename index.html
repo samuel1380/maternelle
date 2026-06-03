@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maternelle | Clínica Estética & Bem-Estar</title>
+    <meta name="description" content="Descubra a Maternelle Clínica Estética. Oferecemos tratamentos estéticos especializados em pós-parto, autocuidado e bem-estar, em um ambiente acolhedor e luxuoso.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Folha de Estilos -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header / Menu de Navegação -->
+    <header class="main-header" id="header">
+        <div class="header-container">
+            <a href="#home" class="logo" id="logo-link">
+                <img src="assets/logo.jpg" alt="Maternelle Clínica Estética" class="header-logo-img">
+            </a>
+            
+            <nav class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="#home" class="nav-link active">Início</a></li>
+                    <li><a href="#diferenciais" class="nav-link">Diferenciais</a></li>
+                    <li><a href="#tratamentos" class="nav-link">Tratamentos</a></li>
+                    <li><a href="#sobre" class="nav-link">Sobre Nós</a></li>
+                    <li><a href="#depoimentos" class="nav-link">Depoimentos</a></li>
+                    <li><a href="#contato" class="nav-link">Contato</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <a href="https://wa.me/5511999999999?text=Olá!%20Gostaria%20de%20agendar%20uma%20avaliação%20na%20Maternelle." target="_blank" rel="noopener" class="btn btn-primary btn-header" id="btn-header-schedule">
+                    Agendar Consulta
+                </a>
+                <button class="menu-toggle" id="menu-toggle" aria-label="Abrir Menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section" id="home">
+            <div class="hero-bg" style="background-image: url('assets/hero.png');"></div>
+            <div class="hero-overlay"></div>
+            <div class="hero-container">
+                <div class="hero-content reveal">
+                    <span class="hero-tag">Pós-Parto • Autocuidado • Bem-Estar</span>
+                    <h1>Seu refúgio de autocuidado e bem-estar</h1>
+                    <p class="hero-description">
+                        Bem-vinda à Maternelle. Um espaço de acolhimento e alta tecnologia estética dedicado a resgatar sua autoestima e cuidar da sua saúde em todas as fases da vida.
+                    </p>
+                    <div class="hero-cta-group">
+                        <a href="https://wa.me/5511999999999?text=Olá!%20Quero%20agendar%20uma%20avaliação%20na%20Maternelle." target="_blank" rel="noopener" class="btn btn-primary" id="hero-cta-primary">
+                            Agendar Avaliação
+                        </a>
+                        <a href="#tratamentos" class="btn btn-secondary" id="hero-cta-secondary">
+                            Conhecer Tratamentos
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-scroll-indicator">
+                <a href="#diferenciais" aria-label="Rolar para diferenciais">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
+                </a>
+            </div>
+        </section>
+
+        <!-- Seção de Diferenciais -->
+        <section class="diferenciais-section" id="diferenciais">
+            <div class="section-container">
+                <div class="section-header reveal">
+                    <span class="section-subtitle">Por que nos escolher?</span>
+                    <h2>O Padrão Maternelle</h2>
+                    <p class="section-description">Proporcionamos uma experiência única de autocuidado, pautada no acolhimento físico e emocional em cada detalhe.</p>
+                </div>
+
+                <div class="diferenciais-grid">
+                    <!-- Diferencial 1 -->
+                    <div class="diferencial-card reveal">
+                        <div class="diferencial-icon-box">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                        </div>
+                        <h3>Tecnologia de Ponta</h3>
+                        <p>Utilizamos os equipamentos mais modernos e seguros do mercado, devidamente validados e autorizados pela ANVISA.</p>
+                    </div>
+
+                    <!-- Diferencial 2 -->
+                    <div class="diferencial-card reveal">
+                        <div class="diferencial-icon-box">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                        </div>
+                        <h3>Profissionais Especializados</h3>
+                        <p>Nossa equipe é formada por especialistas com ampla formação acadêmica e constante atualização em técnicas estéticas internacionais.</p>
+                    </div>
+
+                    <!-- Diferencial 3 -->
+                    <div class="diferencial-card reveal">
+                        <div class="diferencial-icon-box">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        </div>
+                        <h3>Atendimento Personalizado</h3>
+                        <p>Cada pele é única. Desenvolvemos planos de tratamento individuais para que você alcance resultados naturais e duradouros.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de Tratamentos -->
+        <section class="tratamentos-section" id="tratamentos">
+            <div class="section-container">
+                <div class="section-header reveal">
+                    <span class="section-subtitle">Nossos Serviços</span>
+                    <h2>Tratamentos Exclusivos</h2>
+                    <p class="section-description">Descubra nossa seleção de procedimentos estéticos faciais e corporais focados em rejuvenescer, modelar e renovar.</p>
+                </div>
+
+                <div class="tratamentos-grid">
+                    <!-- Tratamento 1: Limpeza de Pele Profunda -->
+                    <article class="tratamento-card reveal">
+                        <div class="tratamento-img-wrapper">
+                            <img src="assets/facial.png" alt="Limpeza de Pele Profunda na Maternelle" loading="lazy">
+                            <div class="tratamento-overlay"></div>
+                        </div>
+                        <div class="tratamento-info">
+                            <span class="tratamento-category">Facial</span>
+                            <h3>Limpeza de Pele Profunda</h3>
+                            <p>Higienização avançada, extração cuidadosa de impurezas e hidratação profunda. Devolve o brilho, o viço e remove as células mortas com conforto absoluto.</p>
+                            <a href="https://wa.me/5511999999999?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20a%20Limpeza%20de%20Pele%20Profunda%20na%20Maternelle." target="_blank" rel="noopener" class="tratamento-link">
+                                Saber Mais 
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Tratamento 2: Microagulhamento -->
+                    <article class="tratamento-card reveal">
+                        <div class="tratamento-img-wrapper">
+                            <img src="assets/microagulhamento.png" alt="Microagulhamento e Estímulo de Colágeno na Maternelle" loading="lazy">
+                            <div class="tratamento-overlay"></div>
+                        </div>
+                        <div class="tratamento-info">
+                            <span class="tratamento-category">Facial & Corporal</span>
+                            <h3>Microagulhamento & Colágeno</h3>
+                            <p>Indução de colágeno e peelings químicos superficiais para renovação da pele, tratamento de rugas finas, melasma, poros abertos, cicatrizes e estrias.</p>
+                            <a href="https://wa.me/5511999999999?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20o%20Microagulhamento%20na%20Maternelle." target="_blank" rel="noopener" class="tratamento-link">
+                                Saber Mais 
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Tratamento 3: Harmonização Facial Leve & Preenchimentos -->
+                    <article class="tratamento-card reveal">
+                        <div class="tratamento-img-wrapper">
+                            <img src="assets/preenchimento.png" alt="Harmonização Facial Leve e Preenchimento na Maternelle" loading="lazy">
+                            <div class="tratamento-overlay"></div>
+                        </div>
+                        <div class="tratamento-info">
+                            <span class="tratamento-category">Facial</span>
+                            <h3>Harmonização Leve & Preenchimento</h3>
+                            <p>Procedimentos sutis e preenchimentos que devolvem os volumes perdidos e valorizam os seus traços naturais com elegância e leveza, sem exageros.</p>
+                            <a href="https://wa.me/5511999999999?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20a%20Harmonização%20Facial%20Leve%20na%20Maternelle." target="_blank" rel="noopener" class="tratamento-link">
+                                Saber Mais 
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Tratamento 4: Drenagem Pós-Operatória -->
+                    <article class="tratamento-card reveal">
+                        <div class="tratamento-img-wrapper">
+                            <img src="assets/drenagem_pos.png" alt="Drenagem Pós-Operatória e Linfática na Maternelle" loading="lazy">
+                            <div class="tratamento-overlay"></div>
+                        </div>
+                        <div class="tratamento-info">
+                            <span class="tratamento-category">Recuperação</span>
+                            <h3>Drenagem Pós-Operatória & Linfática</h3>
+                            <p>Protocolos focados em pós-cesárea e procedimentos estéticos (com liberação médica). Drenagem linfática especializada contra a retenção de líquidos e inchaço.</p>
+                            <a href="https://wa.me/5511999999999?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20a%20Drenagem%20Pós-Operatória%20e%20Linfática%20na%20Maternelle." target="_blank" rel="noopener" class="tratamento-link">
+                                Saber Mais 
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Tratamento 5: Gordura Localizada & Endermoterapia -->
+                    <article class="tratamento-card reveal">
+                        <div class="tratamento-img-wrapper">
+                            <img src="assets/endermoterapia.png" alt="Tratamento de Gordura Localizada e Endermoterapia na Maternelle" loading="lazy">
+                            <div class="tratamento-overlay"></div>
+                        </div>
+                        <div class="tratamento-info">
+                            <span class="tratamento-category">Corporal</span>
+                            <h3>Gordura Localizada & Endermoterapia</h3>
+                            <p>Combate a depósitos de gordura localizada e celulite através de endermoterapia vácuo-aspiratória. Ativa a circulação local e modela o contorno corporal.</p>
+                            <a href="https://wa.me/5511999999999?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20a%20Endermoterapia%20e%20Gordura%20Localizada%20na%20Maternelle." target="_blank" rel="noopener" class="tratamento-link">
+                                Saber Mais 
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Tratamento 6: Diástase & Flacidez Abdominal -->
+                    <article class="tratamento-card reveal">
+                        <div class="tratamento-img-wrapper">
+                            <img src="assets/diastase.png" alt="Tratamento de Diástase e Flacidez Abdominal na Maternelle" loading="lazy">
+                            <div class="tratamento-overlay"></div>
+                        </div>
+                        <div class="tratamento-info">
+                            <span class="tratamento-category">Pós-Parto & Corporal</span>
+                            <h3>Diástase & Flacidez Abdominal</h3>
+                            <p>Avaliação corporal completa e tratamentos complementares direcionados para reabilitação da diástase e protocolos específicos para recuperação da flacidez abdominal pós-gestacional.</p>
+                            <a href="https://wa.me/5511999999999?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20os%20tratamentos%20para%20Diástase%20e%20Flacidez%20na%20Maternelle." target="_blank" rel="noopener" class="tratamento-link">
+                                Saber Mais 
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                            </a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Sobre Nós -->
+        <section class="sobre-section" id="sobre">
+            <div class="section-container sobre-grid">
+                <div class="sobre-img-box reveal">
+                    <div class="sobre-img-frame"></div>
+                    <img src="assets/sobre.png" alt="Fundadora da Maternelle Clínica Estética" loading="lazy">
+                </div>
+                
+                <div class="sobre-content reveal">
+                    <span class="section-subtitle">Sobre a Maternelle</span>
+                    <h2>Onde a ciência encontra o acolhimento do autocuidado</h2>
+                    <p class="sobre-p-destaque">A Maternelle Clínica Estética nasceu do desejo de redefinir a estética de forma acolhedora, respeitando cada momento da mulher.</p>
+                    <p>
+                        Acreditamos que a estética de verdade está ligada à saúde e ao bem-estar. Nosso propósito é cuidar do seu corpo respeitando os limites da sua biologia, proporcionando rejuvenescimento natural e recuperação corporal com foco especial no pós-parto e na maternidade ativa.
+                    </p>
+                    <p>
+                        Nosso ambiente foi planejado para que você tenha um momento verdadeiramente seu, oferecendo salas de tratamento privativas, climatizadas e decoradas em tons suaves para transmitir paz e tranquilidade do início ao fim do seu atendimento.
+                    </p>
+                    
+                    <ul class="sobre-list">
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span>Ambiente luxuoso e atendimento com agendamento privativo</span>
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span>Avaliação diagnóstica detalhada antes de qualquer procedimento</span>
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span>Uso exclusivo de cosmecêuticos e equipamentos premium</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de Depoimentos -->
+        <section class="depoimentos-section" id="depoimentos">
+            <div class="section-container">
+                <div class="section-header reveal">
+                    <span class="section-subtitle">Depoimentos</span>
+                    <h2>A Palavra de Quem se Cuida Conosco</h2>
+                    <p class="section-description">A satisfação e a melhora na autoestima de nossos pacientes são os combustíveis para nossa dedicação diária.</p>
+                </div>
+
+                <div class="depoimentos-grid">
+                    <!-- Depoimento 1 -->
+                    <div class="depoimento-card reveal">
+                        <div class="depoimento-rating">
+                            <!-- 5 estrelas -->
+                            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                        </div>
+                        <p class="depoimento-text">
+                            "A minha experiência na Maternelle foi espetacular. Comecei o protocolo pós-parto após a liberação médica e me ajudou demais a recuperar o tônus da minha barriga e aliviar o inchaço. A equipe é muito carinhosa e o ambiente é perfeito para relaxar."
+                        </p>
+                        <div class="depoimento-user">
+                            <div class="depoimento-user-avatar">AM</div>
+                            <div>
+                                <h4 class="depoimento-user-name">Amanda Montenegro</h4>
+                                <span class="depoimento-user-role">Paciente desde 2021</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Depoimento 2 -->
+                    <div class="depoimento-card reveal">
+                        <div class="depoimento-rating">
+                            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                        </div>
+                        <p class="depoimento-text">
+                            "Sou cliente da depilação a laser e amo. A máquina é super moderna e não sinto dor, comparado a outras que já experimentei. Sem falar que a clínica é linda, parece que você entrou em um spa de hotel 5 estrelas. Super recomendo."
+                        </p>
+                        <div class="depoimento-user">
+                            <div class="depoimento-user-avatar">BC</div>
+                            <div>
+                                <h4 class="depoimento-user-name">Beatriz Castanho</h4>
+                                <span class="depoimento-user-role">Paciente desde 2022</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Depoimento 3 -->
+                    <div class="depoimento-card reveal">
+                        <div class="depoimento-rating">
+                            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                        </div>
+                        <p class="depoimento-text">
+                            "Comecei a fazer drenagem corporal e tratamento para celulite. Os resultados estão sendo excelentes. Fico impressionado como a equipe é atenciosa e cria planos que realmente funcionam pro meu corpo. Nota mil!"
+                        </p>
+                        <div class="depoimento-user">
+                            <div class="depoimento-user-avatar">RC</div>
+                            <div>
+                                <h4 class="depoimento-user-name">Rodrigo Campos</h4>
+                                <span class="depoimento-user-role">Paciente desde 2023</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de Contato -->
+        <section class="contato-section" id="contato">
+            <div class="section-container contato-grid">
+                
+                <div class="contato-info-box reveal">
+                    <span class="section-subtitle">Fale Conosco</span>
+                    <h2>Agende sua Visita</h2>
+                    <p class="contato-desc-text">Estamos ansiosos para acolher você. Agende seu horário ou tire suas dúvidas pelos nossos canais oficiais de comunicação.</p>
+                    
+                    <div class="contato-detalhes">
+                        <!-- Endereço -->
+                        <div class="contato-item">
+                            <div class="contato-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            </div>
+                            <div>
+                                <h4>Clínica</h4>
+                                <p>Av. Brigadeiro Faria Lima, 4500 - Itaim Bibi, São Paulo - SP</p>
+                            </div>
+                        </div>
+
+                        <!-- Telefone -->
+                        <div class="contato-item">
+                            <div class="contato-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                            </div>
+                            <div>
+                                <h4>Telefones</h4>
+                                <p>(11) 3456-7890 / (11) 99999-9999</p>
+                            </div>
+                        </div>
+
+                        <!-- E-mail -->
+                        <div class="contato-item">
+                            <div class="contato-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                            </div>
+                            <div>
+                                <h4>E-mail</h4>
+                                <p>contato@maternelleestetica.com.br</p>
+                            </div>
+                        </div>
+
+                        <!-- Horário -->
+                        <div class="contato-item">
+                            <div class="contato-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                            </div>
+                            <div>
+                                <h4>Horário de Funcionamento</h4>
+                                <p>Segunda a Sexta: 8h às 20h<br>Sábado: 9h às 15h</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contato-form-box reveal">
+                    <h3>Envie uma Mensagem</h3>
+                    <form id="contact-form" class="contato-form">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" required placeholder=" ">
+                            <label for="name">Seu Nome Completo</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" required placeholder=" ">
+                            <label for="email">Seu E-mail</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" id="phone" name="phone" required placeholder=" ">
+                            <label for="phone">Seu Celular / WhatsApp</label>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" required placeholder=" " rows="4"></textarea>
+                            <label for="message">Como podemos ajudar você?</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-submit" id="btn-submit-contact">
+                            Enviar Mensagem
+                        </button>
+                    </form>
+                    <div id="form-success-msg" class="form-success-hidden">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                        <span>Mensagem enviada com sucesso! Entraremos em contato em breve.</span>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <!-- Mapa Fictício Elegante e Limpo -->
+            <div class="map-container reveal">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.9607675971485!2d-46.68595872466927!3d-23.587780078781745!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce57579f1db17f%3A0xe54ebde7c9e05d0e!2sAv.%20Brigadeiro%20Faria%20Lima%2C%204500%20-%20Itaim%20Bibi%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2004538-132!5e0!3m2!1spt-BR!2sbr!4v1717370000000!5m2!1spt-BR!2sbr" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Localização da Aura Estética no Google Maps"></iframe>
+            </div>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <img src="assets/logo.jpg" alt="Maternelle Clínica Estética" class="footer-logo-img">
+                <p>Cuidado especializado, pós-parto, rejuvenescimento e autoestima em todas as fases da vida. Descubra sua melhor versão.</p>
+                <div class="footer-socials">
+                    <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Maternelle no Instagram">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                    </a>
+                    <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Maternelle no Facebook">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <h4>Links Rápidos</h4>
+                <ul>
+                    <li><a href="#home">Início</a></li>
+                    <li><a href="#diferenciais">Diferenciais</a></li>
+                    <li><a href="#tratamentos">Tratamentos</a></li>
+                    <li><a href="#sobre">Sobre Nós</a></li>
+                    <li><a href="#depoimentos">Depoimentos</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-tratamentos">
+                <h4>Procedimentos</h4>
+                <ul>
+                    <li><a href="#tratamentos">Limpeza de Pele SkinCare</a></li>
+                    <li><a href="#tratamentos">Harmonização Facial</a></li>
+                    <li><a href="#tratamentos">Criolipólise 360°</a></li>
+                    <li><a href="#tratamentos">Drenagem Linfática Modeladora</a></li>
+                    <li><a href="#tratamentos">Depilação a Laser</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2026 Maternelle Clínica Estética. Todos os direitos reservados. Desenvolvido com carinho e precisão.</p>
+        </div>
+    </footer>
+
+    <!-- Janela de Chat do WhatsApp Interativo -->
+    <div class="whatsapp-chat-box" id="whatsapp-chat">
+        <!-- Header do Chat -->
+        <div class="chat-header">
+            <div class="chat-header-info">
+                <div class="chat-avatar">
+                    <img src="assets/logo.jpg" alt="Maternelle">
+                    <span class="avatar-badge"></span>
+                </div>
+                <div class="chat-user-details">
+                    <span class="chat-user-name">Maternelle</span>
+                    <span class="chat-user-status" id="chat-status">Online</span>
+                </div>
+            </div>
+            <button class="chat-close-btn" id="chat-close" aria-label="Fechar Chat">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            </button>
+        </div>
+
+        <!-- Corpo de Mensagens do Chat -->
+        <div class="chat-body" id="chat-body">
+            <!-- Mensagem de boas-vindas do sistema -->
+            <div class="chat-system-date">Hoje</div>
+            
+            <!-- Indicador de Digitando (oculto por padrão) -->
+            <div class="chat-msg msg-bot typing" id="chat-typing-indicator" style="display: none;">
+                <div class="typing-dots">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Rodapé do Chat com Input -->
+        <form class="chat-footer" id="chat-form-input">
+            <input type="text" id="chat-input" placeholder="Aguardando atendimento..." required autocomplete="off" disabled>
+            <button type="submit" class="chat-send-btn" id="chat-send" aria-label="Enviar Mensagem" disabled>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            </button>
+        </form>
+    </div>
+
+    <!-- Botão Flutuante do WhatsApp -->
+    <button class="whatsapp-float-btn" id="whatsapp-float" aria-label="Fale conosco no WhatsApp">
+        <span class="whatsapp-tooltip">Fale Conosco</span>
+        <div class="whatsapp-pulse"></div>
+        <svg width="30" height="30" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M19.001 4.908A9.817 9.817 0 0 0 11.992 2C6.534 2 2.085 6.448 2.08 11.908c0 1.748.458 3.45 1.321 4.956L2 22l5.255-1.377a9.816 9.816 0 0 0 4.735 1.206h.005c5.46 0 9.908-4.449 9.913-9.91a9.821 9.821 0 0 0-2.912-7.011zm-7.009 15.395a8.12 8.12 0 0 1-4.148-1.137l-.298-.177-3.087.81.823-3.01-.194-.308a8.118 8.118 0 0 1-1.246-4.275c.004-4.478 3.65-8.123 8.135-8.123A8.106 8.106 0 0 1 17.75 6.757a8.11 8.11 0 0 1 2.38 5.75c-.006 4.479-3.65 8.124-8.138 8.124zm4.457-6.09c-.244-.122-1.442-.712-1.666-.794-.223-.081-.385-.122-.547.122-.162.244-.629.794-.771.956-.142.162-.284.183-.528.061a6.65 6.65 0 0 1-1.957-1.206 7.33 7.33 0 0 1-1.355-1.687c-.142-.244-.015-.376.107-.497.11-.11.244-.284.365-.427.122-.142.162-.244.244-.407.081-.162.04-.305-.02-.427-.061-.122-.548-1.32-.75-1.81-.198-.477-.398-.413-.547-.42-.142-.008-.304-.008-.466-.008a.897.897 0 0 0-.65.305c-.223.244-.852.833-.852 2.031 0 1.198.872 2.356.994 2.519.122.162 1.716 2.62 4.156 3.673.58.251 1.033.4 1.385.513.59.187 1.127.16 1.551.097.472-.07 1.442-.589 1.645-1.158.203-.569.203-1.057.142-1.158-.06-.1-.223-.162-.466-.284z"/>
+        </svg>
+    </button>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>

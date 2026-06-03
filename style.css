@@ -1,0 +1,1563 @@
+/* ==========================================================================
+   DESIGN SYSTEM & VARIÁVEIS
+   ========================================================================== */
+:root {
+    /* Paleta de Cores Premium Maternelle (Rose Gold e Rosa Antigo) */
+    --primary: #DCA295;       /* Rose Gold Maternelle */
+    --primary-dark: #B77E72;  /* Rose Gold Escuro */
+    --primary-light: #F9E7E4; /* Rose Gold Claro */
+    --secondary: #F5EBE6;     /* Rosa Chá / Nude Luxo */
+    --secondary-dark: #EACCC5;
+    --bg-color: #FAF8F6;      /* Off-white Clean */
+    --text-color: #2C2C2C;    /* Grafite Elegante */
+    --text-light: #707070;    /* Cinza de apoio */
+    --white: #FFFFFF;
+    --dark-slate: #1E2229;
+    --whatsapp-green: #25D366;
+    --whatsapp-dark: #128C7E;
+    
+    /* Fontes */
+    --font-title: 'Playfair Display', serif;
+    --font-body: 'Inter', sans-serif;
+    
+    /* Efeitos Visuais */
+    --border-radius: 12px;
+    --shadow-sm: 0 4px 12px rgba(220, 162, 149, 0.06);
+    --shadow-md: 0 12px 36px rgba(0, 0, 0, 0.04);
+    --shadow-lg: 0 24px 48px rgba(220, 162, 149, 0.12);
+    --transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ==========================================================================
+   RESET & CONFIGURAÇÕES GERAIS
+   ========================================================================== */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px; /* Compensa a altura do header fixo */
+    font-size: 16px;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition);
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ==========================================================================
+   ESTILOS COMPARTILHADOS / UTILITÁRIOS
+   ========================================================================== */
+.section-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 24px;
+}
+
+.section-header {
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto 60px auto;
+}
+
+.section-subtitle {
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: var(--primary);
+    font-weight: 600;
+    display: block;
+    margin-bottom: 12px;
+}
+
+.section-header h2 {
+    font-family: var(--font-title);
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: var(--dark-slate);
+    margin-bottom: 18px;
+    line-height: 1.2;
+}
+
+.section-description {
+    font-size: 1.05rem;
+    color: var(--text-light);
+}
+
+/* Botões */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 32px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: var(--transition);
+    border: none;
+    outline: none;
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    color: var(--white);
+    box-shadow: 0 8px 20px rgba(220, 162, 149, 0.25);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 24px rgba(220, 162, 149, 0.35);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--white);
+    border: 2px solid var(--white);
+}
+
+.btn-secondary:hover {
+    background-color: var(--white);
+    color: var(--text-color);
+    transform: translateY(-3px);
+}
+
+/* ==========================================================================
+   HEADER / MENU DE NAVEGAÇÃO
+   ========================================================================== */
+.main-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: var(--transition);
+    padding: 24px 0;
+}
+
+/* Estado ativo do Header quando rola a página */
+.main-header.scrolled {
+    padding: 16px 0;
+    background-color: rgba(250, 248, 246, 0.85);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba(197, 160, 89, 0.1);
+    box-shadow: var(--shadow-sm);
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    transition: var(--transition);
+}
+
+.header-logo-img {
+    height: 75px;
+    width: auto;
+    object-fit: contain;
+    transition: var(--transition);
+    filter: drop-shadow(0 2px 5px rgba(0,0,0,0.1));
+}
+
+.main-header.scrolled .header-logo-img {
+    height: 60px;
+}
+
+.logo-accent {
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    font-weight: 300;
+    letter-spacing: 4px;
+    color: var(--primary-light);
+}
+
+.main-header.scrolled .logo-accent {
+    color: var(--primary);
+}
+
+.nav-list {
+    display: flex;
+    gap: 32px;
+}
+
+.nav-link {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.8);
+    position: relative;
+    padding: 6px 0;
+}
+
+.main-header.scrolled .nav-link {
+    color: var(--text-color);
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary);
+    transition: var(--transition);
+}
+
+.nav-link:hover, .nav-link.active {
+    color: var(--white);
+}
+
+.main-header.scrolled .nav-link:hover, 
+.main-header.scrolled .nav-link.active {
+    color: var(--primary);
+}
+
+.nav-link:hover::after, .nav-link.active::after {
+    width: 100%;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.btn-header {
+    padding: 10px 24px;
+    font-size: 0.8rem;
+}
+
+/* Botão hambúrguer para mobile */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 26px;
+    height: 18px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 1010;
+}
+
+.menu-toggle .bar {
+    width: 100%;
+    height: 2px;
+    background-color: var(--white);
+    transition: var(--transition);
+}
+
+.main-header.scrolled .menu-toggle .bar {
+    background-color: var(--dark-slate);
+}
+
+/* ==========================================================================
+   HERO SECTION
+   ========================================================================== */
+.hero-section {
+    position: relative;
+    height: 100vh;
+    min-height: 700px;
+    display: flex;
+    align-items: center;
+    color: var(--white);
+    overflow: hidden;
+}
+
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transform: scale(1.05);
+    animation: zoomHero 15s infinite alternate ease-in-out;
+    z-index: 1;
+}
+
+@keyframes zoomHero {
+    0% { transform: scale(1.05); }
+    100% { transform: scale(1.15); }
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(20, 20, 20, 0.75) 30%, rgba(20, 20, 20, 0.3) 100%);
+    z-index: 2;
+}
+
+.hero-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+    position: relative;
+    z-index: 3;
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.hero-tag {
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: var(--primary-light);
+    display: block;
+    margin-bottom: 20px;
+}
+
+.hero-content h1 {
+    font-family: var(--font-title);
+    font-size: 3.8rem;
+    font-weight: 400;
+    line-height: 1.15;
+    margin-bottom: 24px;
+}
+
+.hero-description {
+    font-size: 1.15rem;
+    color: rgba(255, 255, 255, 0.85);
+    margin-bottom: 40px;
+    max-width: 550px;
+    font-weight: 300;
+}
+
+.hero-cta-group {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+/* Indicador de Rolar */
+.hero-scroll-indicator {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+    animation: bounce 2s infinite;
+}
+
+.hero-scroll-indicator svg {
+    color: rgba(255, 255, 255, 0.6);
+    transition: var(--transition);
+}
+
+.hero-scroll-indicator svg:hover {
+    color: var(--primary);
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0) translateX(-50%); }
+    40% { transform: translateY(-10px) translateX(-50%); }
+    60% { transform: translateY(-5px) translateX(-50%); }
+}
+
+/* ==========================================================================
+   DIFERENCIAIS SECTION
+   ========================================================================== */
+.diferenciais-section {
+    background-color: var(--white);
+    position: relative;
+}
+
+.diferenciais-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.diferencial-card {
+    padding: 50px 30px;
+    background-color: var(--bg-color);
+    border-radius: var(--border-radius);
+    text-align: center;
+    transition: var(--transition);
+    border: 1px solid rgba(197, 160, 89, 0.05);
+}
+
+.diferencial-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-lg);
+    background-color: var(--white);
+    border-color: rgba(197, 160, 89, 0.2);
+}
+
+.diferencial-icon-box {
+    width: 70px;
+    height: 70px;
+    background-color: var(--secondary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 30px auto;
+    color: var(--primary);
+    transition: var(--transition);
+}
+
+.diferencial-card:hover .diferencial-icon-box {
+    background-color: var(--primary);
+    color: var(--white);
+    transform: rotateY(180deg);
+}
+
+.diferencial-card h3 {
+    font-family: var(--font-title);
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--dark-slate);
+    margin-bottom: 15px;
+}
+
+.diferencial-card p {
+    font-size: 0.95rem;
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+/* ==========================================================================
+   TRATAMENTOS SECTION
+   ========================================================================== */
+.tratamentos-section {
+    background-color: var(--bg-color);
+}
+
+.tratamentos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.tratamento-card {
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    transition: var(--transition);
+}
+
+.tratamento-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-lg);
+}
+
+.tratamento-img-wrapper {
+    position: relative;
+    overflow: hidden;
+    height: 280px;
+}
+
+.tratamento-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s ease;
+}
+
+.tratamento-card:hover .tratamento-img-wrapper img {
+    transform: scale(1.1);
+}
+
+.tratamento-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(30, 34, 41, 0.4), transparent);
+    opacity: 0.8;
+}
+
+.tratamento-info {
+    padding: 30px;
+}
+
+.tratamento-category {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--primary);
+    display: block;
+    margin-bottom: 10px;
+}
+
+.tratamento-info h3 {
+    font-family: var(--font-title);
+    font-size: 1.45rem;
+    color: var(--dark-slate);
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.tratamento-info p {
+    font-size: 0.95rem;
+    color: var(--text-light);
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+.tratamento-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--primary);
+}
+
+.tratamento-link svg {
+    transition: transform 0.3s ease;
+}
+
+.tratamento-link:hover {
+    color: var(--primary-dark);
+}
+
+.tratamento-link:hover svg {
+    transform: translateX(5px);
+}
+
+/* ==========================================================================
+   SOBRE NÓS SECTION
+   ========================================================================== */
+.sobre-section {
+    background-color: var(--white);
+    overflow: hidden;
+}
+
+.sobre-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.sobre-img-box {
+    position: relative;
+    padding-left: 20px;
+    padding-bottom: 20px;
+}
+
+.sobre-img-frame {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: calc(100% - 20px);
+    height: calc(100% - 20px);
+    border: 3px solid var(--primary);
+    border-radius: var(--border-radius);
+    z-index: 1;
+    transition: var(--transition);
+}
+
+.sobre-img-box img {
+    position: relative;
+    z-index: 2;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-lg);
+    transition: var(--transition);
+    width: 100%;
+}
+
+.sobre-img-box:hover .sobre-img-frame {
+    transform: translate(-10px, 10px);
+}
+
+.sobre-img-box:hover img {
+    transform: translate(5px, -5px);
+}
+
+.sobre-content {
+    padding-right: 20px;
+}
+
+.sobre-content .section-subtitle {
+    margin-bottom: 12px;
+}
+
+.sobre-content h2 {
+    font-family: var(--font-title);
+    font-size: 2.6rem;
+    font-weight: 600;
+    color: var(--dark-slate);
+    line-height: 1.25;
+    margin-bottom: 24px;
+}
+
+.sobre-p-destaque {
+    font-size: 1.15rem;
+    color: var(--primary-dark);
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.sobre-content p {
+    font-size: 0.98rem;
+    color: var(--text-light);
+    margin-bottom: 20px;
+}
+
+.sobre-list {
+    margin-top: 30px;
+}
+
+.sobre-list li {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+.sobre-list li svg {
+    color: var(--primary);
+    flex-shrink: 0;
+}
+
+/* ==========================================================================
+   DEPOIMENTOS SECTION
+   ========================================================================== */
+.depoimentos-section {
+    background-color: var(--bg-color);
+}
+
+.depoimentos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.depoimento-card {
+    background-color: var(--white);
+    padding: 40px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-md);
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.depoimento-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.depoimento-rating {
+    color: var(--primary);
+    margin-bottom: 20px;
+    display: flex;
+    gap: 4px;
+}
+
+.depoimento-text {
+    font-size: 0.95rem;
+    color: var(--text-light);
+    line-height: 1.7;
+    font-style: italic;
+    margin-bottom: 30px;
+}
+
+.depoimento-user {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.depoimento-user-avatar {
+    width: 48px;
+    height: 48px;
+    background-color: var(--secondary);
+    color: var(--primary-dark);
+    font-weight: 700;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+}
+
+.depoimento-user-name {
+    font-size: 0.98rem;
+    font-weight: 600;
+    color: var(--dark-slate);
+}
+
+.depoimento-user-role {
+    font-size: 0.8rem;
+    color: var(--text-light);
+}
+
+/* ==========================================================================
+   CONTATO & FORMULÁRIO SECTION
+   ========================================================================== */
+.contato-section {
+    background-color: var(--white);
+}
+
+.contato-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 80px;
+    align-items: start;
+    margin-bottom: 80px;
+}
+
+.contato-desc-text {
+    color: var(--text-light);
+    margin-bottom: 40px;
+}
+
+.contato-detalhes {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.contato-item {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.contato-icon {
+    width: 50px;
+    height: 50px;
+    background-color: var(--secondary);
+    color: var(--primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.contato-item h4 {
+    font-size: 1.1rem;
+    color: var(--dark-slate);
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.contato-item p {
+    font-size: 0.92rem;
+    color: var(--text-light);
+    line-height: 1.5;
+}
+
+.contato-form-box {
+    background-color: var(--bg-color);
+    padding: 50px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-sm);
+}
+
+.contato-form-box h3 {
+    font-family: var(--font-title);
+    font-size: 1.8rem;
+    color: var(--dark-slate);
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+.contato-form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+/* Formulário Inteligente com Float Label */
+.form-group {
+    position: relative;
+}
+
+.form-group input, 
+.form-group textarea {
+    width: 100%;
+    padding: 12px 0;
+    font-size: 0.95rem;
+    border: none;
+    border-bottom: 1.5px solid #D5D5D5;
+    background-color: transparent;
+    color: var(--text-color);
+    outline: none;
+    transition: var(--transition);
+}
+
+.form-group textarea {
+    resize: none;
+}
+
+.form-group label {
+    position: absolute;
+    top: 12px;
+    left: 0;
+    font-size: 0.95rem;
+    color: var(--text-light);
+    pointer-events: none;
+    transition: var(--transition);
+}
+
+/* Ao focar ou preencher, o label sobe */
+.form-group input:focus ~ label,
+.form-group input:not(:placeholder-shown) ~ label,
+.form-group textarea:focus ~ label,
+.form-group textarea:not(:placeholder-shown) ~ label {
+    top: -12px;
+    font-size: 0.75rem;
+    color: var(--primary);
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-bottom-color: var(--primary);
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 16px;
+    margin-top: 10px;
+}
+
+/* Sucesso do Formulário */
+.form-success-hidden {
+    display: none;
+}
+
+.form-success-show {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 25px;
+    padding: 15px;
+    background-color: rgba(37, 211, 102, 0.1);
+    border: 1px solid rgba(37, 211, 102, 0.3);
+    border-radius: 8px;
+    color: #128C7E;
+    font-size: 0.92rem;
+    font-weight: 500;
+    animation: fadeIn 0.5s forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Container do Google Maps */
+.map-container {
+    width: 100%;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+}
+
+.map-container iframe {
+    display: block;
+    filter: grayscale(1) contrast(1.1) invert(0.03); /* Mapa sofisticado em tons frios */
+}
+
+/* ==========================================================================
+   FOOTER (RODAPÉ)
+   ========================================================================== */
+.main-footer {
+    background-color: var(--dark-slate);
+    color: var(--white);
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 24px;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    gap: 80px;
+}
+
+.footer-logo-img {
+    height: 90px;
+    width: auto;
+    object-fit: contain;
+    margin-bottom: 20px;
+    display: block;
+    filter: drop-shadow(0 2px 5px rgba(0,0,0,0.2));
+}
+
+.footer-brand p {
+    color: rgba(255, 255, 255, 0.65);
+    font-size: 0.92rem;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.footer-socials {
+    display: flex;
+    gap: 15px;
+}
+
+.footer-socials a {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255, 255, 255, 0.8);
+    transition: var(--transition);
+}
+
+.footer-socials a:hover {
+    background-color: var(--primary);
+    color: var(--white);
+    transform: translateY(-3px);
+}
+
+.footer-links h4,
+.footer-tratamentos h4 {
+    font-family: var(--font-body);
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+    color: var(--primary-light);
+}
+
+.footer-links ul li,
+.footer-tratamentos ul li {
+    margin-bottom: 12px;
+}
+
+.footer-links ul li a,
+.footer-tratamentos ul li a {
+    color: rgba(255, 255, 255, 0.65);
+    font-size: 0.92rem;
+}
+
+.footer-links ul li a:hover,
+.footer-tratamentos ul li a:hover {
+    color: var(--primary-light);
+    padding-left: 5px;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.07);
+    padding: 30px 24px;
+    text-align: center;
+}
+
+.footer-bottom p {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.45);
+}
+
+/* ==========================================================================
+   BOTÃO DO WHATSAPP FLUTUANTE & WIDGET DE CHAT
+   ========================================================================== */
+.whatsapp-float-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background-color: var(--whatsapp-green);
+    color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 30px rgba(37, 211, 102, 0.4);
+    z-index: 999;
+    transition: var(--transition);
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+
+.whatsapp-float-btn:hover {
+    background-color: var(--whatsapp-dark);
+    transform: translateY(-5px) scale(1.05);
+}
+
+/* Animação de Onda / Pulso ao redor */
+.whatsapp-pulse {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--whatsapp-green);
+    border-radius: 50%;
+    z-index: -1;
+    animation: wavePulse 2s infinite ease-out;
+}
+
+@keyframes wavePulse {
+    0% { transform: scale(1); opacity: 0.5; }
+    100% { transform: scale(1.5); opacity: 0; }
+}
+
+/* Balão Tooltip */
+.whatsapp-tooltip {
+    position: absolute;
+    right: 75px;
+    background-color: var(--dark-slate);
+    color: var(--white);
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    white-space: nowrap;
+    opacity: 0;
+    transform: translateX(15px);
+    transition: var(--transition);
+    pointer-events: none;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.whatsapp-tooltip::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -5px;
+    transform: translateY(-50%) rotate(45deg);
+    width: 10px;
+    height: 10px;
+    background-color: var(--dark-slate);
+}
+
+.whatsapp-float-btn:hover .whatsapp-tooltip {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Janela de Chat do WhatsApp */
+.whatsapp-chat-box {
+    position: fixed;
+    bottom: 105px;
+    right: 30px;
+    width: 360px;
+    max-width: calc(100vw - 60px);
+    height: 480px;
+    max-height: calc(100vh - 150px);
+    background-color: #efeae2;
+    border-radius: 16px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transform: translateY(20px) scale(0.95);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.whatsapp-chat-box.active {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+    pointer-events: all;
+}
+
+.chat-header {
+    background-color: #128C7E;
+    color: var(--white);
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.chat-header-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.chat-avatar {
+    position: relative;
+    width: 40px;
+    height: 40px;
+}
+
+.chat-avatar img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1.5px solid var(--white);
+}
+
+.avatar-badge {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 10px;
+    height: 10px;
+    background-color: #4dc247;
+    border: 2px solid #128C7E;
+    border-radius: 50%;
+}
+
+.chat-user-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-user-name {
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+.chat-user-status {
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.chat-close-btn {
+    background: transparent;
+    border: none;
+    color: var(--white);
+    cursor: pointer;
+    opacity: 0.8;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.chat-close-btn:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.chat-body {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    /* Fundo clássico do WhatsApp com doodles */
+    background-image: radial-gradient(rgba(0, 0, 0, 0.04) 1.5px, transparent 0);
+    background-size: 18px 18px;
+    scroll-behavior: smooth;
+}
+
+.chat-system-date {
+    align-self: center;
+    background-color: rgba(255, 255, 255, 0.75);
+    color: var(--text-light);
+    font-size: 0.75rem;
+    padding: 4px 12px;
+    border-radius: 6px;
+    margin-bottom: 5px;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.05);
+    font-weight: 500;
+}
+
+.chat-msg {
+    max-width: 85%;
+    padding: 10px 14px;
+    border-radius: 12px;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    position: relative;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.08);
+    animation: msgPop 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes msgPop {
+    from { opacity: 0; transform: translateY(10px) scale(0.9); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.msg-bot {
+    align-self: flex-start;
+    background-color: var(--white);
+    color: var(--text-color);
+    border-top-left-radius: 0;
+}
+
+.msg-user {
+    align-self: flex-end;
+    background-color: #E2F9CB;
+    color: #303030;
+    border-top-right-radius: 0;
+}
+
+.chat-msg-time {
+    font-size: 0.7rem;
+    color: var(--text-light);
+    margin-top: 4px;
+    text-align: right;
+    display: block;
+}
+
+/* Indicador de Digitando */
+.typing-dots {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 4px 0;
+}
+
+.typing-dots span {
+    width: 6px;
+    height: 6px;
+    background-color: var(--text-light);
+    border-radius: 50%;
+    animation: dotPulse 1.5s infinite ease-in-out;
+}
+
+.typing-dots span:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.typing-dots span:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes dotPulse {
+    0%, 100% { transform: scale(1); opacity: 0.4; }
+    50% { transform: scale(1.4); opacity: 1; }
+}
+
+.chat-footer {
+    background-color: #f0f2f5;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-top: 1px solid rgba(0,0,0,0.05);
+}
+
+.chat-footer input {
+    flex: 1;
+    padding: 12px 18px;
+    border-radius: 50px;
+    border: 1px solid #e0e0e0;
+    outline: none;
+    font-size: 0.92rem;
+    background-color: var(--white);
+    transition: var(--transition);
+}
+
+.chat-footer input:focus {
+    border-color: #128C7E;
+}
+
+.chat-footer input:disabled {
+    background-color: #e9ecef;
+    color: var(--text-light);
+    cursor: not-allowed;
+}
+
+.chat-send-btn {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: #128C7E;
+    color: var(--white);
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: var(--transition);
+    flex-shrink: 0;
+}
+
+.chat-send-btn:hover:not(:disabled) {
+    background-color: #075E54;
+    transform: scale(1.05);
+}
+
+.chat-send-btn:disabled {
+    background-color: #cccccc;
+    color: #888888;
+    cursor: not-allowed;
+}
+
+/* ==========================================================================
+   SCROLL REVEAL E EFEITOS DE TRANSIÇÃO
+   ========================================================================== */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+    transition-delay: 0.1s;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ==========================================================================
+   MÍDIA QUERIES - RESPONSIVIDADE
+   ========================================================================== */
+
+/* Telas de Computadores Médios (Telas de até 1024px) */
+@media (max-width: 1024px) {
+    .hero-content h1 {
+        font-size: 3.2rem;
+    }
+    
+    .diferenciais-grid,
+    .tratamentos-grid,
+    .depoimentos-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+    
+    /* Faz o terceiro card ir pra baixo ocupando 2 colunas */
+    .diferenciais-grid > *:last-child,
+    .depoimentos-grid > *:last-child {
+        grid-column: span 2;
+        max-width: 50%;
+        margin: 0 auto;
+    }
+    
+    .sobre-grid,
+    .contato-grid {
+        gap: 40px;
+    }
+    
+    .footer-container {
+        gap: 40px;
+    }
+}
+
+/* Tablets (Telas de até 768px) */
+@media (max-width: 768px) {
+    .section-container {
+        padding: 70px 20px;
+    }
+    
+    .section-header {
+        margin-bottom: 40px;
+    }
+    
+    .section-header h2 {
+        font-size: 2rem;
+    }
+    
+    /* Mostrar botão menu hambúrguer */
+    .menu-toggle {
+        display: flex;
+    }
+    
+    /* Menu mobile lateral */
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 80%;
+        max-width: 320px;
+        height: 100vh;
+        background-color: var(--bg-color);
+        box-shadow: -10px 0 30px rgba(0, 0, 0, 0.05);
+        padding: 100px 40px;
+        z-index: 1005;
+        transition: var(--transition);
+    }
+    
+    .nav-menu.active {
+        right: 0;
+    }
+    
+    .nav-list {
+        flex-direction: column;
+        gap: 24px;
+    }
+    
+    .nav-link {
+        color: var(--text-color);
+        font-size: 1.1rem;
+        display: inline-block;
+    }
+    
+    .main-header.scrolled .nav-link {
+        color: var(--text-color);
+    }
+    
+    .nav-link:hover, .nav-link.active {
+        color: var(--primary);
+    }
+    
+    /* Ocultar CTA no header em telas muito pequenas se necessário */
+    .btn-header {
+        display: none;
+    }
+    
+    /* Botão Hambúrguer mudando para X */
+    .menu-toggle.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+        background-color: var(--text-color);
+    }
+    
+    .menu-toggle.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .menu-toggle.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+        background-color: var(--text-color);
+    }
+    
+    /* Ajustes das seções */
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .sobre-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .sobre-img-box {
+        max-width: 500px;
+        margin: 0 auto 30px auto;
+        padding-left: 10px;
+        padding-bottom: 10px;
+    }
+    
+    .sobre-img-frame {
+        width: calc(100% - 10px);
+        height: calc(100% - 10px);
+    }
+    
+    .sobre-content h2 {
+        font-size: 2rem;
+        text-align: center;
+    }
+    
+    .sobre-content .section-subtitle {
+        text-align: center;
+    }
+    
+    .sobre-p-destaque {
+        text-align: center;
+    }
+    
+    .contato-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+    
+    .contato-form-box {
+        padding: 30px 20px;
+    }
+    
+    .footer-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 40px;
+    }
+    
+    .footer-brand {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .footer-socials {
+        justify-content: center;
+    }
+}
+
+/* Celulares Pequenos (Telas de até 480px) */
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+    
+    .hero-description {
+        font-size: 1rem;
+    }
+    
+    .hero-cta-group {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .hero-cta-group .btn {
+        width: 100%;
+    }
+    
+    .diferenciais-grid,
+    .tratamentos-grid,
+    .depoimentos-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .diferenciais-grid > *,
+    .tratamentos-grid > *,
+    .depoimentos-grid > * {
+        grid-column: span 1 !important;
+        max-width: 100% !important;
+    }
+    
+    .section-header h2 {
+        font-size: 1.8rem;
+    }
+    
+    .whatsapp-float-btn {
+        bottom: 20px;
+        right: 20px;
+        width: 50px;
+        height: 50px;
+    }
+    
+    .whatsapp-tooltip {
+        display: none; /* Oculta em celulares menores para evitar sobreposição */
+    }
+}
