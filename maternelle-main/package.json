@@ -1,0 +1,13 @@
+{
+  "name": "maternelle-estetica",
+  "version": "1.0.0",
+  "description": "Site institucional da Maternelle Clínica Estética",
+  "main": "index.html",
+  "scripts": {
+    "start": "serve",
+    "dev": "serve"
+  },
+  "dependencies": {
+    "serve": "^14.2.3"
+  }
+}
